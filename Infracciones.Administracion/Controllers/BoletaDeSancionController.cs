@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Infracciones.BusinessLayer;
+using Infracciones.Dto;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -31,13 +33,26 @@ namespace Infracciones.Administracion.Controllers
 
         // POST: BoletaDeSancion/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(BoletaDeSancion boleta)
         {
             try
             {
-                // TODO: Add insert logic here
+                if (Session["Usuario"] == null)
+                    return RedirectToAction("Login", "Home");
 
-                return RedirectToAction("Index");
+                boleta.UsuarioId = (Session["Usuario"] as Usuario).Id;
+                if (ModelState.IsValid)
+                {
+                    BoletaDeSancionBl.Add(boleta);
+
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    ViewBag.ListaDeArticulos = ArticuloBl.GetAll();
+                    ViewBag.ListaDeIncisos = IncisoBl.GetAll();
+                    return View(boleta);
+                }
             }
             catch
             {

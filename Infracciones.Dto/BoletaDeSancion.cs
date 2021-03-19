@@ -10,6 +10,10 @@ namespace Infracciones.Dto
         [Range(0,int.MaxValue)]
         public int Id { get; set; }
 
+        [Required]
+        public int UsuarioId { get; set; }
+
+
         [DisplayName("Numero de licencia")]
         public string NumeroDeLicencia { get; set; }
 
@@ -17,14 +21,32 @@ namespace Infracciones.Dto
 
         [Required(ErrorMessage ="El nombre es obligatorio")]
         [DisplayName("Nombre del conductor")]
-        public string NombreDelconductor { get; set; }
+        public string NombreDelConductor { get; set; }
 
         [DisplayName("Fecha de registo")]
         public DateTime FechaDeRegistro { get; set; }
-        public string Coordenadas { get; set; }
+
+        [DisplayName("Correo electrónico")]
         public string Correo { get; set; }
+
+        [DisplayName("Teléfono")]
         public string Telefono { get; set; }
+
         [Required]
-        public int SancionId { get; set; }
+        [DisplayName("Reglamento")]
+        public int ReglamentoId { get; set; }
+
+        [Required]
+        [DisplayName("Estatus")]
+        public int EstatusDeBoletaDeSancion { get; set; }
+
+        [DisplayName("Coordenadas GPS")]
+        public string CoordenadasGps { get; set; }
+
+        [DataType(DataType.MultilineText)]
+        public string Observaciones { get; set; }
+
+        [DisplayName("Referencia de banco")]
+        public string ReferenciaDeBanco { get; set; }
     }
 }

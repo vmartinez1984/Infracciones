@@ -50,6 +50,7 @@
     <Compile Include="ImagenBl.cs" />
     <Compile Include="IncisoBl.cs" />
     <Compile Include="Mappers\ArticuloMapper.cs" />
+    <Compile Include="Mappers\BoletaDeSancionMapper.cs" />
     <Compile Include="Mappers\FraccionMapper.cs" />
     <Compile Include="Mappers\IncisoMapper.cs" />
     <Compile Include="Mappers\PerfilMapper.cs" />

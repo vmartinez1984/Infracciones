@@ -1,4 +1,5 @@
 ﻿using Infracciones.Dto;
+using Infracciones.Mappers;
 using Infracciones.Persistencia.Dao;
 using Infracciones.Persistencia.Entity;
 using System;
@@ -13,7 +14,7 @@ namespace Infracciones.BusinessLayer
             {
                 BoletaDeSancionEntity entity;
 
-                entity = GetEntity(boletaDeSancion);
+                entity = BoletaDeSancionMapper.Get(boletaDeSancion);
                 entity.Id = BoletaDeSancionDao.Add(entity);
 
                 return entity.Id;
@@ -25,9 +26,5 @@ namespace Infracciones.BusinessLayer
             }
         }
 
-        private static BoletaDeSancionEntity GetEntity(BoletaDeSancion boletaDeSancion)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
