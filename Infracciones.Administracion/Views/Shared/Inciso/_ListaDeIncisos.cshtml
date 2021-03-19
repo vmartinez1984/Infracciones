@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Infracciones.Dto.Inciso>
+
+<div class="container">
+    <h3>Lista de incisos</h3>
+    <p>
+        @Html.ActionLink("Agregar", $"Create/{ViewBag.FraccionID}", "Inciso")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Multa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDescuento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDeposito)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Motivo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaDeRegistro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaDeBaja)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Multa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsDescuento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsDeposito)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Motivo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaDeRegistro)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaDeBaja)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", "Inciso", new { id = item.Id }, null) |
+                    @Html.ActionLink("Detalles", "Details", "Inciso", new { id = item.Id }, null) |
+                    @Html.ActionLink("Borrar", "Delete", "Inciso", new { id = item.Id }, null)
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

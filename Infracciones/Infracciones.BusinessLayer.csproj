@@ -48,8 +48,10 @@
     <Compile Include="BoletaDeSancionBl.cs" />
     <Compile Include="FraccionBl.cs" />
     <Compile Include="ImagenBl.cs" />
+    <Compile Include="IncisoBl.cs" />
     <Compile Include="Mappers\ArticuloMapper.cs" />
     <Compile Include="Mappers\FraccionMapper.cs" />
+    <Compile Include="Mappers\IncisoMapper.cs" />
     <Compile Include="Mappers\PerfilMapper.cs" />
     <Compile Include="Mappers\ReglamentoMapper.cs" />
     <Compile Include="Mappers\UsuarioMapper.cs" />

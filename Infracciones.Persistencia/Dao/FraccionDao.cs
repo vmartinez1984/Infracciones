@@ -102,7 +102,7 @@ namespace Infracciones.Persistencia.Dao
                 fecha_de_registro   FechaDeRegistro,
                 fecha_de_baja       FechaDeBaja
                 FROM fraccion                
-                WHERE articulo.id = {id}
+                WHERE fraccion.id = {id}
                 LIMIT 1";
                 using (var db = new MySqlConnection(Conexion.CadenaDeConexion))
                 {

@@ -26,11 +26,11 @@ namespace Infracciones
             }
         }
 
-        public static void Delete(int id, int FraccionIdBaja)
+        public static void Delete(int id, int usuarioIdBaja)
         {
             try
             {
-                FraccionDao.Delete(id, FraccionIdBaja);
+                FraccionDao.Delete(id, usuarioIdBaja);
             }
             catch (Exception)
             {

@@ -1,0 +1,85 @@
+﻿@model Infracciones.Dto.Fraccion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container">
+    <h2>Detalles</h2>
+
+    <div>
+        <h4>Fracción</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Numero)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Numero)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ArticuloId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ArticuloId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.IsActivo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IsActivo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Descripcion)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UsuarioIdAlta)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UsuarioIdAlta)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UsuarioIdBaja)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UsuarioIdBaja)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FechaDeRegistro)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FechaDeRegistro)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FechaDeBaja)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FechaDeBaja)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Regresar a la lista", $"Details/{Model.ArticuloId}", "Articulo")|
+        @Html.ActionLink("Editar", "Edit", new { id = Model.Id })
+    </p>
+    @Html.Partial("Inciso/_ListaDEIncisos", ViewBag.ListaDeincisos as List<Infracciones.Dto.Inciso>)
+</div>

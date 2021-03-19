@@ -50,7 +50,7 @@ namespace Infracciones
             return item;
         }
 
-        public static List<Articulo> GetAll(int? id)
+        public static List<Articulo> GetAll(int? id = null)
         {
             try
             {

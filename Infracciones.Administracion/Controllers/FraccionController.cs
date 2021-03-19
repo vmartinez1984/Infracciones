@@ -12,18 +12,33 @@ namespace Infracciones.Administracion.Controllers
         // GET: Fraccion
         public ActionResult Index()
         {
+            if (Session["Usuario"] == null)
+                return RedirectToAction("Login", "Home");
+
             return View();
         }
 
         // GET: Fraccion/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            if (Session["Usuario"] == null)
+                return RedirectToAction("Login", "Home");
+
+            Fraccion fraccion;
+
+            fraccion = FraccionBl.Get(id);
+            ViewBag.FraccionId = fraccion.Id;
+            ViewBag.ListaDeincisos = IncisoBl.GetAll(id);
+
+            return View(fraccion);
         }
 
         // GET: Fraccion/Create/{articuloId}
         public ActionResult Create(int id)
         {
+            if (Session["Usuario"] == null)
+                return RedirectToAction("Login", "Home");
+
             ViewBag.Articulo = ArticuloBl.Get(id);
 
             return View();
@@ -42,12 +57,12 @@ namespace Infracciones.Administracion.Controllers
                 if (ModelState.IsValid)
                 {
                     FraccionBl.Add(fraccion);
-                    return RedirectToAction($"Details/{fraccion.ArticuloId}","Articulo");
+                    return RedirectToAction($"Details/{fraccion.ArticuloId}", "Articulo");
                 }
                 else
                 {
                     ViewBag.Articulo = ArticuloBl.Get(fraccion.ArticuloId);
-                    return View();
+                    return View(fraccion);
                 }
 
             }
@@ -60,18 +75,33 @@ namespace Infracciones.Administracion.Controllers
         // GET: Fraccion/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            if (Session["Usuario"] == null)
+                return RedirectToAction("Login", "Home");
+
+            Fraccion fraccion;
+
+            fraccion = FraccionBl.Get(id);
+
+            return View(fraccion);
         }
 
         // POST: Fraccion/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Fraccion fraccion)
         {
             try
             {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                if (Session["Usuario"] == null)
+                    return RedirectToAction("Login", "Home");
+                if (ModelState.IsValid)
+                {
+                    FraccionBl.Update(fraccion);
+                    return RedirectToAction($"Details/{fraccion.ArticuloId}","Articulo");
+                }
+                else
+                {
+                    return View(fraccion);
+                }
             }
             catch
             {
@@ -80,9 +110,18 @@ namespace Infracciones.Administracion.Controllers
         }
 
         // GET: Fraccion/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int? id)
         {
-            return View();
+            if (Session["Usuario"] == null)
+                return RedirectToAction("Login", "Home");
+            //if (id is null)
+            //   return RedirectToAction($"Details/{fraccion.ArticuloId}", "Articulo");
+
+            Fraccion fraccion;
+
+            fraccion = FraccionBl.Get((int)id);
+
+            return View(fraccion);
         }
 
         // POST: Fraccion/Delete/5
@@ -91,9 +130,17 @@ namespace Infracciones.Administracion.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
+                if (Session["Usuario"] == null)
+                    return RedirectToAction("Login", "Home");
 
-                return RedirectToAction("Index");
+                Usuario usuario;
+                Fraccion fraccion;
+
+                usuario = (Session["Usuario"] as Usuario);
+                fraccion = FraccionBl.Get(id);
+                FraccionBl.Delete(id, usuario.Id);
+
+                return RedirectToAction($"Details/{fraccion.ArticuloId}", "Articulo");
             }
             catch
             {

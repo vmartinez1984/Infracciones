@@ -46,6 +46,7 @@
     <Compile Include="BoletaDeSancion.cs" />
     <Compile Include="Fraccion.cs" />
     <Compile Include="Imagen.cs" />
+    <Compile Include="Inciso.cs" />
     <Compile Include="Perfil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reglamento.cs" />

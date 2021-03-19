@@ -1,0 +1,99 @@
+﻿@model Infracciones.Dto.Inciso
+
+@{
+    ViewBag.Title = "Detalles de inciso";
+}
+<div class="container">
+<h2>Detalles</h2>
+
+<div>
+    <h4>Inciso</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Multa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Multa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDescuento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDescuento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDeposito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDeposito)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsActivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsActivo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioIdAlta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioIdAlta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioIdBaja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioIdBaja)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FraccionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FraccionId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Motivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Motivo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeRegistro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeRegistro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeBaja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeBaja)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Regresar a la lista", $"Details/{Model.FraccionId}", "Fraccion")
+</p>
+</div>

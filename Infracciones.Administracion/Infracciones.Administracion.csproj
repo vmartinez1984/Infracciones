@@ -120,8 +120,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArticuloController.cs" />
+    <Compile Include="Controllers\BoletaDeSancionController.cs" />
     <Compile Include="Controllers\FraccionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IncisoController.cs" />
     <Compile Include="Controllers\ReglamentoController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
@@ -7101,6 +7103,16 @@
     <Content Include="Views\Articulo\Delete.cshtml" />
     <Content Include="Views\Shared\Fraccion\_ListaDeFracciones.cshtml" />
     <Content Include="Views\Fraccion\Create.cshtml" />
+    <Content Include="Views\Fraccion\Edit.cshtml" />
+    <Content Include="Views\Fraccion\Details.cshtml" />
+    <Content Include="Views\Fraccion\Delete.cshtml" />
+    <Content Include="Views\Inciso\Index.cshtml" />
+    <Content Include="Views\Inciso\Details.cshtml" />
+    <Content Include="Views\Inciso\Create.cshtml" />
+    <Content Include="Views\Inciso\Edit.cshtml" />
+    <Content Include="Views\Inciso\Delete.cshtml" />
+    <Content Include="Views\Shared\Inciso\_ListaDeIncisos.cshtml" />
+    <Content Include="Views\BoletaDeSancion\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

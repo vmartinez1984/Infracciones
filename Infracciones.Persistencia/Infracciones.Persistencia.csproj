@@ -96,6 +96,7 @@
     <Compile Include="Dao\EstatusDeLaBoletaDeSancionDao.cs" />
     <Compile Include="Dao\FraccionDao.cs" />
     <Compile Include="Dao\ImagenDao.cs" />
+    <Compile Include="Dao\IncisoDao.cs" />
     <Compile Include="Dao\PerfilDao.cs" />
     <Compile Include="Dao\ReglamentoDao.cs" />
     <Compile Include="Dao\TipoDeImagenDao.cs" />
@@ -105,6 +106,7 @@
     <Compile Include="Entity\EstatusDeLaBoletaDeSancionEntity.cs" />
     <Compile Include="Entity\FraccionEntity.cs" />
     <Compile Include="Entity\ImagenEntity.cs" />
+    <Compile Include="Entity\IncisoEntity.cs" />
     <Compile Include="Entity\PagoDeBoletaDeSancionEntity.cs" />
     <Compile Include="Entity\PerfilEntity.cs" />
     <Compile Include="Entity\ReglamentoEntity.cs" />

@@ -9,16 +9,22 @@ namespace Infracciones.Dto
     {
         [Range(0,int.MaxValue)]
         public int Id { get; set; }
+
         [DisplayName("Numero de licencia")]
         public string NumeroDeLicencia { get; set; }
+
         public string Placa { get; set; }
+
         [Required(ErrorMessage ="El nombre es obligatorio")]
+        [DisplayName("Nombre del conductor")]
         public string NombreDelconductor { get; set; }
+
+        [DisplayName("Fecha de registo")]
         public DateTime FechaDeRegistro { get; set; }
         public string Coordenadas { get; set; }
         public string Correo { get; set; }
         public string Telefono { get; set; }
         [Required]
-        public int RelgamentoId { get; set; }
+        public int SancionId { get; set; }
     }
 }

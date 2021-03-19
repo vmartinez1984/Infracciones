@@ -2,6 +2,7 @@
 using Infracciones.Dto;
 using Infracciones.Persistencia.Entity;
 using System.Collections.Generic;
+
 namespace Infracciones.Mappers
 {
     internal class FraccionMapper

@@ -10,6 +10,9 @@ namespace Infracciones.Administracion.Controllers
         // GET: Reglamento
         public ActionResult Index(int? id)
         {
+            if (Session["Usuario"] == null)
+                return RedirectToAction("Login", "Home");
+
             List<Reglamento> lista;
 
             lista = ReglamentoBl.GetAll(id);
@@ -20,6 +23,9 @@ namespace Infracciones.Administracion.Controllers
         // GET: Reglamento/Details/5
         public ActionResult Details(int id)
         {
+            if (Session["Usuario"] == null)
+                return RedirectToAction("Login", "Home");
+
             Reglamento reglamento;
 
             reglamento = ReglamentoBl.Get(id);
@@ -30,6 +36,9 @@ namespace Infracciones.Administracion.Controllers
         // GET: Reglamento/Create
         public ActionResult Create()
         {
+            if (Session["Usuario"] == null)
+                return RedirectToAction("Login", "Home");
+
             return View();
         }
 
@@ -63,6 +72,9 @@ namespace Infracciones.Administracion.Controllers
         // GET: Reglamento/Edit/5
         public ActionResult Edit(int id)
         {
+            if (Session["Usuario"] == null)
+                return RedirectToAction("Login", "Home");
+
             Reglamento reglamento;
 
             reglamento = ReglamentoBl.Get(id);

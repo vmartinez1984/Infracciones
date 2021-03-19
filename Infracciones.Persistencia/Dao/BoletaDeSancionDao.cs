@@ -14,7 +14,7 @@ namespace Infracciones.Persistencia.Dao
             {
                 string query;
 
-                query = "";
+                query = $@"";
                 using (var db = new MySqlConnection(Conexion.CadenaDeConexion))
                 {
                     entity.Id = db.Query<int>(query).FirstOrDefault();
