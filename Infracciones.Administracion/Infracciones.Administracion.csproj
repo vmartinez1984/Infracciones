@@ -7113,6 +7113,9 @@
     <Content Include="Views\Inciso\Delete.cshtml" />
     <Content Include="Views\Shared\Inciso\_ListaDeIncisos.cshtml" />
     <Content Include="Views\BoletaDeSancion\Create.cshtml" />
+    <Content Include="Views\BoletaDeSancion\Index.cshtml" />
+    <Content Include="Views\BoletaDeSancion\ListaDeSanciones.cshtml" />
+    <Content Include="Views\BoletaDeSancion\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

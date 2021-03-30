@@ -15,11 +15,7 @@ namespace Infracciones.Api.Controllers
         {
             try
             {
-                List<Reglamento> lista;
-
-                lista = null;
-
-                return Ok(lista);
+                return Ok(new { Version = 1 });
             }
             catch (Exception ex)
             {

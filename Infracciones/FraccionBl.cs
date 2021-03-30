@@ -69,6 +69,25 @@ namespace Infracciones
             }
         }
 
+        public static List<Fraccion> GetAll()
+        {
+            try
+            {
+                List<Fraccion> lista;
+                List<FraccionEntity> entities;
+
+                entities = FraccionDao.GetAll();
+                lista = FraccionMapper.GetAll(entities);
+
+                return lista;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public static void Update(Fraccion item)
         {
             try

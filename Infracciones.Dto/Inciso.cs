@@ -29,7 +29,9 @@ namespace Infracciones.Dto
         [Required]
         [DisplayName("Fracción")]
         public int FraccionId { get; set; }
-     
+
+        [Required]
+        [DataType(DataType.MultilineText)]
         public string Motivo { get; set; }
 
         [DisplayName("Fecha de registro")]

@@ -1,0 +1,7 @@
+D:\Proyectos\Net\Infracciones\ConsoleApp\bin\Debug\ConsoleApp.exe.config
+D:\Proyectos\Net\Infracciones\ConsoleApp\bin\Debug\ConsoleApp.exe
+D:\Proyectos\Net\Infracciones\ConsoleApp\bin\Debug\ConsoleApp.pdb
+D:\Proyectos\Net\Infracciones\ConsoleApp\obj\Debug\ConsoleApp.csprojAssemblyReference.cache
+D:\Proyectos\Net\Infracciones\ConsoleApp\obj\Debug\ConsoleApp.csproj.CoreCompileInputs.cache
+D:\Proyectos\Net\Infracciones\ConsoleApp\obj\Debug\ConsoleApp.exe
+D:\Proyectos\Net\Infracciones\ConsoleApp\obj\Debug\ConsoleApp.pdb

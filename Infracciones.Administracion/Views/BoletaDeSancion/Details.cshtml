@@ -1,0 +1,118 @@
+﻿@model Infracciones.Dto.BoletaDeSancion
+
+@{
+    ViewBag.Title = "Detalles de la boleta de sanción";
+}
+
+<div class="container">
+
+    <h2>Detalles</h2>
+
+    <div>
+        <h4>Boleta de sancion</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.UsuarioId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UsuarioId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NumeroDeLicencia)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NumeroDeLicencia)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Placa)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Placa)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NombreDelConductor)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NombreDelConductor)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FechaDeRegistro)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FechaDeRegistro)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Correo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Correo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Telefono)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ReglamentoId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ReglamentoId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EstatusDeBoletaDeSancion)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EstatusDeBoletaDeSancion)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CoordenadasGps)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CoordenadasGps)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Observaciones)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Observaciones)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ReferenciaDeBanco)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ReferenciaDeBanco)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Ver pdf", "Pdf", new { id = Model.Id }) |
+        @Html.ActionLink("Buscar", "Index")
+    </p>
+
+</div>

@@ -1,0 +1,6 @@
+D:\Proyectos\Net\Infracciones\Infracciones.Repositorio\bin\Release\Infracciones.Repositorio.dll
+D:\Proyectos\Net\Infracciones\Infracciones.Repositorio\bin\Release\Infracciones.Repositorio.pdb
+D:\Proyectos\Net\Infracciones\Infracciones.Repositorio\obj\Release\Infracciones.Repositorio.csprojAssemblyReference.cache
+D:\Proyectos\Net\Infracciones\Infracciones.Repositorio\obj\Release\Infracciones.Repositorio.csproj.CoreCompileInputs.cache
+D:\Proyectos\Net\Infracciones\Infracciones.Repositorio\obj\Release\Infracciones.Repositorio.dll
+D:\Proyectos\Net\Infracciones\Infracciones.Repositorio\obj\Release\Infracciones.Repositorio.pdb

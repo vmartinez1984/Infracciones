@@ -16,7 +16,16 @@ namespace Infracciones.Persistencia.Dao
                 List<ImagenEntity> entities;
                 string query;
 
-                query = "";
+                query = $@"SELECT
+                    id,
+                    boleta_de_sancion_id    BoletaDeSancionId,
+                    tipo_de_imagen_id       TipoDeImagenId,
+                    is_activo               IsActivo,
+                    ruta_del_archivo        RutaDelArchivo,
+                    fecha_de_registro       FechaDeRegistro
+                FROM imagen
+                WHERE boleta_de_sancion_id = {boletaDeSancionId}
+                ";
                 using (var db = new MySqlConnection())
                 {
                     entities = db.Query<ImagenEntity>(query).ToList();
@@ -37,10 +46,31 @@ namespace Infracciones.Persistencia.Dao
             {
                 string query;
 
-                query = "";
+                query = $@"INSERT INTO imagen
+                (
+                    boleta_de_sancion_id,
+                    tipo_de_imagen_id,
+                    is_activo,
+                    ruta_del_archivo,
+                    fecha_de_registro
+                )
+                VALUES
+                (
+                    @BoletaDeSancionId,
+                    @TipoDeImagenId,
+                    1,
+                    @RutaDeArchivo,
+                    NOW()
+                )
+                ";
                 using (var db = new MySqlConnection(Conexion.CadenaDeConexion))
                 {
-                    entity.Id = db.Query<int>(query).FirstOrDefault();
+                    entity.Id = db.Query<int>(query, new
+                    {
+                        BoletaDeSancionId = entity.BoletaDeSancionId,
+                        TipoDeImagenId = entity.TipoDeImagenId,
+                        RutaDeArchivo = entity.RutaDeArchivo
+                    }).FirstOrDefault();
                 }
 
                 return entity.Id;

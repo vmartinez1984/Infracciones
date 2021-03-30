@@ -69,6 +69,10 @@
       <Project>{2ae15265-4a9a-4566-b668-5e5ad37bd9dc}</Project>
       <Name>Infracciones.Persistencia</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Infracciones.Repositorio\Infracciones.Repositorio.csproj">
+      <Project>{4B9AA2E8-125A-4859-B60A-63B2F592A857}</Project>
+      <Name>Infracciones.Repositorio</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

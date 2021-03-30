@@ -168,3 +168,5 @@ D:\Proyectos\Net\Infracciones\Infracciones.Administracion\bin\K4os.Hash.xxHash.x
 D:\Proyectos\Net\Infracciones\Infracciones.Administracion\bin\System.Memory.xml
 D:\Proyectos\Net\Infracciones\Infracciones.Administracion\bin\System.Numerics.Vectors.xml
 D:\Proyectos\Net\Infracciones\Infracciones.Administracion\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Proyectos\Net\Infracciones\Infracciones.Administracion\bin\Infracciones.Repositorio.dll
+D:\Proyectos\Net\Infracciones\Infracciones.Administracion\bin\Infracciones.Repositorio.pdb

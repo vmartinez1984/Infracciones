@@ -39,3 +39,5 @@ D:\Proyectos\Net\Infracciones\Infracciones\obj\Debug\Infracciones.BusinessLayer.
 D:\Proyectos\Net\Infracciones\Infracciones\obj\Debug\Infracciones.BusinessLayer.csproj.CopyComplete
 D:\Proyectos\Net\Infracciones\Infracciones\obj\Debug\Infracciones.dll
 D:\Proyectos\Net\Infracciones\Infracciones\obj\Debug\Infracciones.pdb
+D:\Proyectos\Net\Infracciones\Infracciones\bin\Debug\Infracciones.Repositorio.dll
+D:\Proyectos\Net\Infracciones\Infracciones\bin\Debug\Infracciones.Repositorio.pdb

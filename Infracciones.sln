@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infracciones.Api", "Infracc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infracciones.Dto", "Infracciones.Dto\Infracciones.Dto.csproj", "{3949F15E-54B6-4F9F-9178-5FAED829E1E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{8F0A091F-3E16-43E6-A617-D071BD50A54E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{3949F15E-54B6-4F9F-9178-5FAED829E1E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3949F15E-54B6-4F9F-9178-5FAED829E1E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3949F15E-54B6-4F9F-9178-5FAED829E1E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F0A091F-3E16-43E6-A617-D071BD50A54E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F0A091F-3E16-43E6-A617-D071BD50A54E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F0A091F-3E16-43E6-A617-D071BD50A54E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F0A091F-3E16-43E6-A617-D071BD50A54E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{14703BC6-8B94-4CD9-A3E9-ACDD181BD162} = {A4148B2B-9BD0-4C82-BC1D-37EA2F706972}
 		{C577BC7C-0D0E-4329-8976-8849D8593D10} = {CB733DEF-4A34-4392-BDA9-990EDD8D12E0}
 		{3949F15E-54B6-4F9F-9178-5FAED829E1E4} = {C14770A5-7841-4A0F-80C2-73A7195E63A2}
+		{8F0A091F-3E16-43E6-A617-D071BD50A54E} = {A4148B2B-9BD0-4C82-BC1D-37EA2F706972}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4AE1D397-0755-4417-8425-21D087BD2912}

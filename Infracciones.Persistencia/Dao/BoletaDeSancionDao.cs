@@ -2,6 +2,7 @@
 using Infracciones.Persistencia.Entity;
 using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Infracciones.Persistencia.Dao
@@ -71,21 +72,77 @@ namespace Infracciones.Persistencia.Dao
             }
         }
 
-        public static BoletaDeSancionEntity Get(string placa)
+        public static BoletaDeSancionEntity Get(int id)
         {
             try
             {
                 string query;
                 BoletaDeSancionEntity entity;
 
-                query = "";
-
+                query = $@"SELECT
+                    id,
+                    usuario_id                      UsuarioId,
+                    reglamento_id                   ReglamentoId,
+                    estatus_de_boleta_de_sancion_id EstatusDeBoletaDeSancion,
+                    numero_de_licencia              NumeroDeLicencia,
+                    nombre_del_conductor            NombreDelConductor,
+                    placa,
+                    coordenadas_gps                 CoordenadasGps,
+                    correo,
+                    telefono,
+                    observaciones,
+                    referencia_de_banco             ReferenciaDeBanco,
+                    fecha_de_registro               FechaDeRegistro
+                FROM boleta_de_sancion
+                WHERE id = @Id
+                ORDER BY id DESC;
+                ";
                 using (var db = new MySqlConnection(Conexion.CadenaDeConexion))
                 {
-                    entity = db.Query<BoletaDeSancionEntity>(query).FirstOrDefault();
+                    entity = db.Query<BoletaDeSancionEntity>(query, new { Id = id }).FirstOrDefault();
                 }
 
                 return entity;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public static List<BoletaDeSancionEntity> Get(string placa)
+        {
+            try
+            {
+                string query;
+                List<BoletaDeSancionEntity> entities;
+
+                query = $@"SELECT
+                    id,
+                    usuario_id                      UsuarioId,
+                    reglamento_id                   ReglamentoId,
+                    estatus_de_boleta_de_sancion_id EstatusDeBoletaDeSancion,
+                    numero_de_licencia              NumeroDeLicencia,
+                    nombre_del_conductor            NombreDelConductor,
+                    placa,
+                    coordenadas_gps                 CoordenadasGps,
+                    correo,
+                    telefono,
+                    observaciones,
+                    referencia_de_banco             ReferenciaDeBanco,
+                    fecha_de_registro               FechaDeRegistro
+                FROM boleta_de_sancion
+                WHERE placa = @Placa
+                ORDER BY id DESC;
+                ";
+                //placa = $"'%{placa}%'";
+                using (var db = new MySqlConnection(Conexion.CadenaDeConexion))
+                {
+                    entities = db.Query<BoletaDeSancionEntity>(query, new { Placa = placa }).ToList();
+                }
+
+                return entities;
             }
             catch (Exception)
             {

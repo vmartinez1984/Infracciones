@@ -16,10 +16,24 @@ namespace Infracciones.Administracion.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Index(BoletaDeSancion boletaDeSancion)
+        {
+            List<BoletaDeSancion> lista;
+
+            lista = BoletaDeSancionBl.Get(boletaDeSancion.Placa);
+
+            return View("ListaDeSanciones", lista);
+        }
+
         // GET: BoletaDeSancion/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            BoletaDeSancion boletaDeSancion;
+
+            boletaDeSancion = BoletaDeSancionBl.Get(id);
+
+            return View(boletaDeSancion);
         }
 
         // GET: BoletaDeSancion/Create
